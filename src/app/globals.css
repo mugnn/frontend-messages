@@ -2,32 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color: #282828;
+  --main-color: #d79921;
+  --caret-color: #fabd2f;
+  --sub-color: #665c54;
+  --sub-alt-color: #212121;
+  --text-color: #ebdbb2;
+  --error-color: #fb4934;
+  --error-extra-color: #cc241d;
+  --colorful-error-color: #cc241d;
+  --colorful-error-extra-color: #9d0006;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: "Inter", sans-serif;
+  color: #ebdbb2;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+label {
+  color: #665c54;
+  font-size: .9rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, 
+h4, h5, h6 {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: var(--sub-color);
+  font-size: .9rem;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--bg-color);
+  width: 1vmin;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub-alt-color);
+  border-radius: 2vmin;
 }
